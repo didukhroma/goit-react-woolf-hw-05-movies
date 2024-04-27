@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import AppBar from 'components/AppBar/AppBar';
 import Container from 'components/Container';
 import Navigation from 'components/Navigation';
+import Loader from 'components/Loader';
 
 const SharedLayout = () => {
   return (
@@ -11,7 +12,7 @@ const SharedLayout = () => {
       <AppBar>
         <Navigation />
       </AppBar>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </Container>
