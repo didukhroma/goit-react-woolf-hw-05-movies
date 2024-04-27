@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  &.active {
+    color: orange;
+  }
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+.link.active {
+  color: red;
+}
