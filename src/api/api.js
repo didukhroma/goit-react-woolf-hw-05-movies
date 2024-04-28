@@ -1,3 +1,4 @@
+//IMPORT
 import axios from 'axios';
 //SETTINGS
 import { API_KEY, BASE_URL } from 'settings/settings';
@@ -35,9 +36,10 @@ export const getMovieReviews = async movieId => {
   return results;
 };
 
-export const getPersonImage = async personId => {
-  const requestStr = `person/${personId}/images`;
-  const response = await axios.get(requestStr);
-  console.log(response);
-  return response.data;
+export const getMovie = async query => {
+  const requestStr = `search/movie?query=${query}`;
+  const {
+    data: { results },
+  } = await axios.get(requestStr);
+  return results;
 };

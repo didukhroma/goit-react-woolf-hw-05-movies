@@ -9,6 +9,7 @@ import MovieInfo from 'components/MovieInfo';
 import Notification from 'components/Notification';
 import MovieAdditionalInfo from 'components/MovieAdditionalInfo';
 import Loader from 'components/Loader';
+import GoBack from 'components/GoBack';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -29,6 +30,7 @@ const MovieDetails = () => {
         <Notification message={error} />
       ) : (
         <>
+          <GoBack />
           <MovieInfo movieData={movie} />
           <MovieAdditionalInfo />
           <Suspense fallback={<Loader />}>

@@ -1,5 +1,11 @@
+import { Link, useLocation } from 'react-router-dom';
+
 const GoBack = () => {
-  return <div>GoBack</div>;
+  const location = useLocation();
+
+  const backLinkHref = location.state?.from ?? '/';
+
+  return <Link to={backLinkHref}>Go back</Link>;
 };
 
 export default GoBack;

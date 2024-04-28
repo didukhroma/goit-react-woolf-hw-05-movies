@@ -1,7 +1,7 @@
 //IMPORT
 import { useEffect, useState } from 'react';
 //COMPONENTS
-import MovieList from 'components/MovieList/MovieList';
+import MovieList from 'components/MovieList';
 import Notification from 'components/Notification';
 //SERVICES
 import { getTrendingMovies } from 'api/api';

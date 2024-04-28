@@ -4,6 +4,7 @@ const MovieAdditionalInfo = () => {
   const { movieId } = useParams();
   return (
     <>
+      <hr />
       <h3>Additional information</h3>
       <ul>
         <li>
@@ -13,6 +14,7 @@ const MovieAdditionalInfo = () => {
           <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
         </li>
       </ul>
+      <hr />
     </>
   );
 };

@@ -21,6 +21,7 @@ const Reviews = () => {
   return (
     <>
       {!reviews.length && <p> We don't have any reviews for this movie.</p>}
+
       {reviews.map(({ id, author, content }) => (
         <li key={id}>
           <h4>{`Author: ${author}`}</h4>
