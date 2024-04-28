@@ -8,14 +8,18 @@ import Loader from 'components/Loader';
 
 const SharedLayout = () => {
   return (
-    <Container>
+    <>
       <AppBar>
-        <Navigation />
+        <Container>
+          <Navigation />
+        </Container>
       </AppBar>
       <Suspense fallback={<Loader />}>
-        <Outlet />
+        <Container>
+          <Outlet />
+        </Container>
       </Suspense>
-    </Container>
+    </>
   );
 };
 

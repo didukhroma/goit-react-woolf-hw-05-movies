@@ -20,16 +20,24 @@ const MovieInfo = ({ movieData }) => {
           <div>
             <h2>{movieData.title}</h2>
             <p>{`User Score: ${(movieData.vote_average * 10).toFixed(0)}%`}</p>
-            <h3>Overview</h3>
-            <p>{movieData.overview}</p>
-            <h3>Genres</h3>
-            <p>
-              {movieData.genres.map(({ name, id }) => (
-                <span className={styles.genreText} key={`${id}-${name}`}>
-                  {name}
-                </span>
-              ))}
-            </p>
+            {!!movieData.overview.length && (
+              <>
+                <h3>Overview</h3>
+                <p>{movieData.overview}</p>
+              </>
+            )}
+            {!!movieData.genres.length && (
+              <>
+                <h3>Genres</h3>
+                <p>
+                  {movieData.genres.map(({ name, id }) => (
+                    <span className={styles.genreText} key={`${id}-${name}`}>
+                      {name}
+                    </span>
+                  ))}
+                </p>
+              </>
+            )}
           </div>
         </div>
       )}
