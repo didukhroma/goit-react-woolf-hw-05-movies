@@ -17,3 +17,10 @@ export const getMovieDetails = async movieId => {
   const response = await axios.get(requestStr);
   return response.data;
 };
+
+export const getPersonImage = async personId => {
+  const requestStr = `person/${personId}/images`;
+  const response = await axios.get(requestStr);
+  console.log(response);
+  return response.data;
+};
